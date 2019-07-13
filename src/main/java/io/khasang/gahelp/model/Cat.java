@@ -11,7 +11,8 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-public class Cat implements DisposableBean, InitializingBean, BeanClassLoaderAware, BeanFactoryAware, BeanNameAware, ApplicationContextAware, BeanPostProcessor {
+public class Cat implements DisposableBean, InitializingBean, BeanClassLoaderAware, BeanFactoryAware,
+                            BeanNameAware, ApplicationContextAware, BeanPostProcessor {
     private String name;
 
     public Cat(String name) {
