@@ -40,7 +40,6 @@ public class HorseController {
     }
 
     @RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
-//    @ResponseStatus(HttpStatus.NO_CONTENT)
     @ResponseBody
     public Horse updateHorseById(@RequestBody Horse horse, @PathVariable("id") long id){
         return horseService.updateById(id, horse);

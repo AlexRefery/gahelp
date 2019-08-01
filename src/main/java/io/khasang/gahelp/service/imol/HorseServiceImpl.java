@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("horseServise")
+@Service("horseService")
 public class HorseServiceImpl implements HorseService {
     private HorseDao horseDao;
 
@@ -34,7 +34,9 @@ public class HorseServiceImpl implements HorseService {
 
     @Override
     public Horse updateById(long id, Horse horse) {
-        horse.setId(id);
+        if (getById(id) != null) {
+            horse.setId(id);
+        }
         return horseDao.update(horse);
     }
 

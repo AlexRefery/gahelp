@@ -1,7 +1,10 @@
 package io.khasang.gahelp.config;
 
+import io.khasang.gahelp.dao.BirdDao;
 import io.khasang.gahelp.dao.HorseDao;
+import io.khasang.gahelp.dao.impl.BirdDaoImpl;
 import io.khasang.gahelp.dao.impl.HorseDaoImpl;
+import io.khasang.gahelp.entity.Bird;
 import io.khasang.gahelp.entity.Horse;
 import io.khasang.gahelp.model.Dog;
 import io.khasang.gahelp.model.impl.Sharik;
@@ -25,6 +28,11 @@ public class AppConfig {
     @Bean
     public HorseDao horseDao(){
         return new HorseDaoImpl(Horse.class);
+    }
+
+    @Bean
+    public BirdDao birdDao(){
+        return new BirdDaoImpl(Bird.class);
     }
 
 }

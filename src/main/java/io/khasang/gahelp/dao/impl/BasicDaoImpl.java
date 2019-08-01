@@ -29,7 +29,7 @@ public class BasicDaoImpl<T> implements BasicDao<T> {
 
     @Override
     public T update(T entity) {
-        getSession().update(entity);
+        getSession().saveOrUpdate(entity);
         return entity;
     }
 

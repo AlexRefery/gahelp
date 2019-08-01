@@ -35,6 +35,7 @@ public interface HorseService {
     /**
      * service for updating horse by id
      * @param id - horse's id
+     * @param horse - new horse for updating in database
      * @return - updating horse
      */
     Horse updateById(long id, Horse horse);
