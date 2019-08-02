@@ -11,7 +11,7 @@ public class Bird {
 
     private String name;
     private String description;
-    private boolean isFlying;
+    private boolean isCurban;
 
     public long getId() {
         return id;
@@ -37,11 +37,11 @@ public class Bird {
         this.description = description;
     }
 
-    public boolean isFlying() {
-        return isFlying;
+    public boolean isCurban() {
+        return isCurban;
     }
 
-    public void setFlying(boolean flying) {
-        this.isFlying = flying;
+    public void setIsCurban(boolean isCurban) {
+        this.isCurban = isCurban;
     }
 }
