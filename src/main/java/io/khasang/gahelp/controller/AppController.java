@@ -75,6 +75,11 @@ public class AppController {
         return "status";
     }
 
+    @RequestMapping("/bird/api")
+    public String birdStatus(){
+        return "bird";
+    }
+
     @RequestMapping("/hello/{name}")
     public String getHelloPage (@PathVariable("name") String name, Model model){
         model.addAttribute("name", name);
